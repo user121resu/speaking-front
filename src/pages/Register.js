@@ -1,6 +1,7 @@
 import {useState} from "react";
 import axios from "axios";
 import {toast} from "react-toastify";
+import {API} from "../components/api";
 
 const Register = () => {
     const [isSuccess, setSuccess] = useState(false);
@@ -10,7 +11,7 @@ const Register = () => {
     const [password, setPassword] = useState(null);
 
     function register() {
-        axios.post("http://localhost:8080/api/v1/auth/register", {
+        axios.post(API+"/auth/register", {
             fullName,
             phone,
             username,

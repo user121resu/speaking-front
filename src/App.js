@@ -20,7 +20,7 @@ function App() {
                     ? <BrowserRouter>
                         <NavbarSpeaker/>
                         <Routes>
-                            <Route path={"/"} element={<h1>Logged in</h1>}/>
+                            <Route path={"/"} element={<h1>Home user</h1>}/>
                             <Route path={"/challenge"} element={<Recorder/>}/>
                             <Route path={"/voices"} element={<Voices/>}/>
                             <Route path='*' element={<Navigate to='/'/>}/>
@@ -29,7 +29,7 @@ function App() {
                     : <BrowserRouter>
                         <NavbarPublic/>
                         <Routes>
-                            <Route path={"/"} element={<h1>Home</h1>}/>
+                            <Route path={"/"} element={<h1>Home public</h1>}/>
                             <Route path={"/login"} element={<Login/>}/>
                             <Route path={"/register"} element={<Register/>}/>
                             <Route path='*' element={<Navigate to='/'/>}/>

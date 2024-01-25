@@ -1,6 +1,7 @@
 import {useState} from "react";
 import axios from "axios";
 import {toast} from "react-toastify";
+import {API} from "../components/api";
 
 const Login = () => {
     const [username,setUsername] = useState(null);
@@ -8,7 +9,7 @@ const Login = () => {
 
     function login() {
         notify(0,"Iltimos ozgina kuting");
-        axios.post("http://localhost:8080/api/v1/auth/login",{
+        axios.post(API+"/auth/login",{
             username,
             password
         }).then((response) => {

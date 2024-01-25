@@ -85,14 +85,15 @@ const VoiceRecorder = () => {
     function getRandomQuestion() {
         setGetRandomQuiz(true);
         setLoading(true);
-        axios.get(API + "/topic/random", {
-            headers: token
-        }).then((response) => {
-            setTopic(response.data);
-            setLoading(false);
-        }).catch((error) => {
-            notify(404, error.response.data.message);
-        })
+        // axios.get(API + "/topic/random", {
+        //     headers: token
+        // }).then((response) => {
+        //     setTopic(response.data);
+        //     setLoading(false);
+        // }).catch((error) => {
+        //     notify(404, error.response.data.message);
+        // })
+        setTopic({id:1,topic:"Tell me about your hometown"});
     }
 
 
