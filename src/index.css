@@ -1,13 +1,375 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
 }
+
+.logo {
+    width: 80px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 3px #5f5f5f, 0 0 0 5px #ecf0f3,
+    8px 8px 15px #a7aaa7,
+    -8px -8px 15px #fff;
+}
+
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.wrapper .form-field .fas {
+    color: #555;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 40px;
+    background-color: #03A9F4;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1px;
+}
+
+.wrapper .btn:hover {
+    background-color: #039BE5;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #03A9F4;
+}
+
+.wrapper a:hover {
+    color: #039BE5;
+}
+
+@media (max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+    }
+}
+
+
+.div-center {
+    text-align: center;
+}
+
+
+.spinner {
+    margin-top: -21px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+.spinner svg {
+    -webkit-animation: loading-rotate 2s linear infinite;
+    -moz-animation: loading-rotate 2s linear infinite;
+    -o-animation: loading-rotate 2s linear infinite;
+    animation: loading-rotate 2s linear infinite;
+    height: 42px;
+    width: 42px;
+}
+
+.spinner .path {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: #409eff;
+    stroke-linecap: round;
+    -webkit-animation: loading-dash 1.5s ease-in-out infinite;
+    -moz-animation: loading-dash 1.5s ease-in-out infinite;
+    -o-animation: loading-dash 1.5s ease-in-out infinite;
+    animation: loading-dash 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes loading-rotate {
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+@-moz-keyframes loading-rotate {
+    to {
+        -moz-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+@-o-keyframes loading-rotate {
+    to {
+        -o-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes loading-rotate {
+    to {
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+@-webkit-keyframes loading-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -40px;
+    }
+    to {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -120px;
+    }
+}
+
+@-moz-keyframes loading-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -40px;
+    }
+    to {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -120px;
+    }
+}
+
+@-o-keyframes loading-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -40px;
+    }
+    to {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -120px;
+    }
+}
+
+@keyframes loading-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -40px;
+    }
+    to {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -120px;
+    }
+}
+
+
+.sound-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sound-wave {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sound-wave .bar {
+    display: block;
+    width: 2px;
+    margin-right: 1px;
+    height: 90px;
+    background: #7C93BF;
+    animation: sound 0ms -800ms linear infinite alternate;
+    transition: height 0.8s;
+}
+
+.sound-wave .bar2{
+    display: block;
+    width: 2px;
+    margin-right: 1px;
+    height: 120px;
+    background: #7C93BF;
+    animation: sound2 0ms -800ms linear infinite alternate;
+    transition: height 0.8s;
+}
+
+@keyframes sound {
+    0% {
+        opacity: .35;
+        height: 6px;
+    }
+    100% {
+        opacity: 1;
+        height: 46px;
+    }
+}
+
+@keyframes sound2 {
+    0% {
+        opacity: .35;
+        height: 6px;
+    }
+    100% {
+        opacity: 1;
+        height: 120px;
+    }
+}
+.bar:nth-child(1) {
+    height: 2px;
+    animation-duration: 474ms;
+}
+
+.bar:nth-child(2) {
+    height: 10px;
+    animation-duration: 433ms;
+}
+
+.bar:nth-child(3) {
+    height: 18px;
+    animation-duration: 407ms;
+}
+
+.bar:nth-child(4) {
+    height: 26px;
+    animation-duration: 458ms;
+}
+
+.bar:nth-child(5) {
+    height: 30px;
+    animation-duration: 400ms;
+}
+
+.bar:nth-child(6) {
+    height: 32px;
+    animation-duration: 427ms;
+}
+
+.bar:nth-child(7) {
+    height: 34px;
+    animation-duration: 441ms;
+}
+
+.bar:nth-child(8) {
+    height: 36px;
+    animation-duration: 419ms;
+}
+
+.bar:nth-child(9) {
+    height: 40px;
+    animation-duration: 487ms;
+}
+
+.bar:nth-child(10) {
+    height: 46px;
+    animation-duration: 442ms;
+}
+
+.bar:nth-child(11) {
+    height: 2px;
+    animation-duration: 474ms;
+}
+
+.bar:nth-child(12) {
+    height: 10px;
+    animation-duration: 433ms;
+}
+
+.bar:nth-child(13) {
+    height: 18px;
+    animation-duration: 407ms;
+}
+
+.bar:nth-child(14) {
+    height: 26px;
+    animation-duration: 458ms;
+}
+
+.bar:nth-child(15) {
+    height: 30px;
+    animation-duration: 400ms;
+}
+
+.bar:nth-child(16) {
+    height: 32px;
+    animation-duration: 427ms;
+}
+
+.bar:nth-child(17) {
+    height: 34px;
+    animation-duration: 441ms;
+}
+
+.bar:nth-child(18) {
+    height: 36px;
+    animation-duration: 419ms;
+}
+
+.bar:nth-child(19) {
+    height: 40px;
+    animation-duration: 487ms;
+}
+
+.bar:nth-child(20) {
+    height: 46px;
+    animation-duration: 442ms;
+}
+
